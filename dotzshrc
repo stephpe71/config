@@ -1,0 +1,37 @@
+# Zsh configuration file
+bindkey -e
+
+# Minimalist prompt
+PS1="%B%n@%m >%b "
+
+alias s='dirs -v -l'
+function p {
+   pushd $* >/dev/null
+   s
+}
+
+function po {
+   popd $* >/dev/null
+   s
+}
+
+alias j=jobs
+alias m=more
+
+alias ll='ls -l'
+alias al='ls -al'
+alias sl='ls'
+alias ltr='ls -ltr'
+alias altr='ls -altr'
+
+alias rl='source ~/.zshrc'
+
+
+alias dp='echo $DISPLAY'
+
+alias wcl='wc -l'
+alias jqc='jq -c'
+alias jqC='jq -C'
+alias jqm='jq -M'
+
+
